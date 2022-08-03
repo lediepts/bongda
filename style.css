@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --max-width: 1200px;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  background: #f2f2f2;
+}
+header {
+  background: #dc0500;
+  color: #fff;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+header .top {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+}
+header > .top > .logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header > .top > .logo > img {
+  height: 80%;
+}
+.menu-list {
+  height: 100%;
+}
+.menu-list > ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.menu-list > ul > li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: background 200ms linear;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  word-spacing: 4px;
+}
+
+.menu-list > ul > li:hover {
+  background: #f2f2f2;
+  color: #dc0500;
+}
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+header > .bottom {
+  background: #fff;
+  height: 4rem;
+  color: #222;
+}
+header > .bottom > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+header > .bottom > .container > .news {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 66.7%;
+}
+header > .bottom > .container > .news > p:first-child {
+  color: #dc0500;
+  font-size: 1.8rem;
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+header > .bottom > .container > .news > p:first-child::after {
+  content: ":";
+}
+header > .bottom > .container > .news > .news-item {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  height: 4rem;
+}
+header > .bottom > .container > .news > .news-item > p {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(0, -50%);
+  white-space: nowrap;
+  animation: text-running 20s linear infinite;
+}
+header > .bottom > .container > .clubs {
+  width: 33.3%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header > .bottom > .container > ul.clubs > li {
+  text-align: center;
+}
+header > .bottom > .container > ul.clubs > li > a {
+  color: #555;
+  height: 100%;
+  width: 100%;
+  transition: color 200ms linear;
+}
+header > .bottom > .container > ul.clubs > li > a:hover {
+  color: #dc0500;
+}
+header > .bottom > .container > ul.clubs > li:not(:last-child)::after {
+  content: "|";
+  padding: 0 1rem;
+  color: #3335;
+}
+
+@keyframes text-running {
+  to {
+    transform: translate(calc(-100% - 800px), -50%);
+  }
+}
